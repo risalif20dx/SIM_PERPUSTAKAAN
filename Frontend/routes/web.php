@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('dashboard_admin');
+    });
+});
+
+Route::prefix('user')->group(function () {
+    Route::get('/users', function () {
+        // Matches The "/admin/users" URL
+    });
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
