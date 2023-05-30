@@ -22,3 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route User
 // get buku
 Route::get('/view', [User::class, 'view']);
+
+// get detail buku
+Route::get('/detail/{parameter}', [User::class, 'detail']);
+
+// menghapus data Buku
+Route::delete('/delete/{parameter}', [User::class, 'delete']);
