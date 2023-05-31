@@ -28,3 +28,9 @@ Route::get('/detail/{parameter}', [User::class, 'detail']);
 
 // menghapus data Buku
 Route::delete('/delete/{parameter}', [User::class, 'delete']);
+
+// membuuat Input data buku
+Route::post('/insert', [User::class, 'insert']);
+
+// Update Data buku
+Route::put('/update/{parameter}', [User::class, 'update']);
