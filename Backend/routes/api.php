@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\User;
+use App\Http\Controllers\Anggota;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,20 @@ Route::post('/insert', [User::class, 'insert']);
 
 // Update Data buku
 Route::put('/update/{parameter}', [User::class, 'update']);
+
+
+// route Anggota
+// get anggota
+Route::get('/view/anggota', [Anggota::class, 'view']);
+
+// get detail
+Route::get('/anggota/{parameter}', [Anggota::class, 'detail']);
+
+// menghapus data Buku
+Route::delete('/delete/anggota/{parameter}', [Anggota::class, 'delete']);
+
+// insert data anggota
+Route::post('/insert/anggota', [Anggota::class, 'insert']);
+
+// Update Data Anggota
+Route::put('/update/anggota/{parameter}', [Anggota::class, 'update']);
