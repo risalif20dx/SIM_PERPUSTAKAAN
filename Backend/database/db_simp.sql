@@ -86,12 +86,12 @@ CREATE TABLE `tb_sirkulasi` (
   `waktu_pinjam` datetime NOT NULL,
   `waktu_kembali` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tb_sirkulasi` */
 
 insert  into `tb_sirkulasi`(`id`,`no_panggil`,`id_anggota`,`id_pustakawan`,`waktu_pinjam`,`waktu_kembali`) values 
-(1,'004.0151 BES f','894891','234123','2023-06-04 04:28:48',NULL);
+(6,'005.1 RAH p','73482','1234','2023-06-09 23:47:16',NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

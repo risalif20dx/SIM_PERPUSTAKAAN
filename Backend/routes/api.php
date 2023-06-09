@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\User;
 use App\Http\Controllers\Anggota;
+use App\Http\Controllers\Sirkulasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -52,3 +53,16 @@ Route::post('/insert/anggota', [Anggota::class, 'insert']);
 
 // Update Data Anggota
 Route::put('/update/anggota/{parameter}', [Anggota::class, 'update']);
+
+// route sirkulasi
+// get data sirkulasi
+Route::get('/view/sirkulasi', [Sirkulasi::class, 'view']);
+
+// detail data sirkulasi
+Route::get('/sirkulasi/{parameter}', [Sirkulasi::class, 'detail']);
+
+// delete data sirkulasi
+Route::delete('/sirkulasi/delete/{parameter}', [Sirkulasi::class, 'delete']);
+
+// insert data sirkulasi 
+Route::post('/insert/sirkulasi', [Sirkulasi::class, 'insert']);
