@@ -54,6 +54,7 @@ Route::post('/insert/anggota', [Anggota::class, 'insert']);
 // Update Data Anggota
 Route::put('/update/anggota/{parameter}', [Anggota::class, 'update']);
 
+
 // route sirkulasi
 // get data sirkulasi
 Route::get('/view/sirkulasi', [Sirkulasi::class, 'view']);
@@ -66,3 +67,6 @@ Route::delete('/sirkulasi/delete/{parameter}', [Sirkulasi::class, 'delete']);
 
 // insert data sirkulasi 
 Route::post('/insert/sirkulasi', [Sirkulasi::class, 'insert']);
+
+// update data sirkulasi
+Route::put('/update/sirkulasi/{parameter}', [Sirkulasi::class, 'update']);

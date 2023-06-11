@@ -48,5 +48,30 @@ class MSirkulasi extends Model
 
         return $query;
     }
+
+    function saveData($no_panggil, $id_anggota, $id_pustakawan, $waktu_pinjam)
+    {
+        $query = DB::table('tb_sirkulasi')
+        ->insert([
+            "no_panggil" => $no_panggil,
+            "id_anggota" => $id_anggota,
+            "id_pustakawan" => $id_pustakawan,
+            "waktu_pinjam" => $waktu_pinjam
+        ]);
+    }
+
+    function updateData($no_panggil, $id_anggota, $id_pustakawan, $waktu_pinjam, $waktu_kembali, $parameter)
+    {
+        $query = DB::table('tb_sirkulasi')
+        ->where("no_panggil", "=", $parameter)
+        ->orwhere("id_anggota", "=", $parameter)
+        ->update([
+            "no_panggil" => $no_panggil,
+            "id_anggota" => $id_anggota,
+            "id_pustakawan" => $id_pustakawan,
+            "waktu_pinjam" => $waktu_pinjam,
+            "waktu_kembali" => $waktu_kembali
+        ]);
+    }
 }
 
