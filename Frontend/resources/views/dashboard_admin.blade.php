@@ -105,7 +105,7 @@
             </div>
             <!-- End of Main Content -->
             @section('script')
-            <script>
+            <!-- <script>
                 $( document ).ready(function() {
                     $.ajax( 
                     {
@@ -130,6 +130,6 @@
                 });
 
                 
-            </script>
+            </script> -->
             @endsection
            @endsection

@@ -5,6 +5,7 @@
 
     <h2 class="text-center">DATA BUKU</h2>
     <div class="container">
+    <button id="myButton">Tambah</button>
     <table id="tes" border=1>
                     
     </table>
@@ -28,6 +29,8 @@
                                    <tr>
                                     <td>${data['buku'][i].bahasa}</td>
                                     <td>${data['buku'][i].des_buku}</td>
+                                    <td><button id="myButton">Edit</button><button id="myButton">Delete</button></td>
+                                   
                                    </tr>
                                 `)
                             }

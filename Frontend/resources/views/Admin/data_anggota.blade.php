@@ -3,9 +3,10 @@
 <body>
     
 
-    <h2 class="text-center">DATA BUKU</h2>
+    <h2 class="text-center">DATA ANGGOTA</h2>
     <div class="container">
     <table id="tes2" border=1>
+    <button id="myButton">Tambah</button>
                     
     </table>
     </div>
@@ -33,6 +34,7 @@
                                     <td>${data['anggota'][i].email}</td>
                                     <td>${data['anggota'][i].alamat}</td>
                                     <td>${data['anggota'][i].no_telepon}</td>
+                                    <td><button id="myButton">Edit</button><button id="myButton">Delete</button></td>
                                    </tr>
                                 `)
                             }

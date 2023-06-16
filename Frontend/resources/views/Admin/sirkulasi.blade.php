@@ -6,6 +6,7 @@
     <h2 class="text-center">DATA SIRKULASI</h2>
     <div class="container">
     <table id="test3" border=1>
+    <button id="myButton">Tambah</button>
                     
     </table>
     </div>
@@ -31,6 +32,7 @@
                                     <td>${data['data_sirkulasi'][i].id_pustakawan}</td>
                                     <td>${data['data_sirkulasi'][i].waktu_pinjam}</td>
                                     <td>${data['data_sirkulasi'][i].waktu_kembali}</td>
+                                    <td><button id="myButton">Edit</button><button id="myButton">Delete</button></td>
                           
                                    </tr>
                                 `)
