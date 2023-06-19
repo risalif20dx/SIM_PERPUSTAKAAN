@@ -71,7 +71,8 @@ class User extends Controller
             "edisi" => $req->edisi, 
             "deskripsi_buku" => $req->deskripsi_buku,
             "sampul" => $req->sampul,
-            "tahun_terbit" =>$req->tahun_terbit
+            "tahun_terbit" =>$req->tahun_terbit,
+            "jumlah" =>$req->jumlah
         );
 
         // cek data pada database
@@ -91,7 +92,8 @@ class User extends Controller
                 $data["edisi"],
                 $data["deskripsi_buku"],
                 $data["sampul"],
-                $data["tahun_terbit"]
+                $data["tahun_terbit"],
+                $data["jumlah"]
             );
             // tampilkan pesan dan status
             $status = 1;

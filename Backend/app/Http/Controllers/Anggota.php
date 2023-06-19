@@ -69,7 +69,8 @@ class Anggota extends Controller
             "jabatan" => $req->jabatan,
             "email" => $req->email,
             "alamat" => $req->alamat,
-            "no_telepon" => $req->no_telepon
+            "no_telepon" => $req->no_telepon,
+            "pass" => $req->pass
         );
 
         // cek data pada database
@@ -85,7 +86,8 @@ class Anggota extends Controller
                 $data["jabatan"],
                 $data["email"],
                 $data["alamat"],
-                $data["no_telepon"]
+                $data["no_telepon"],
+                $data["pass"]
             );
             // tampilkan pesan dan status
             $status = 1;
@@ -114,7 +116,8 @@ class Anggota extends Controller
             "jabatan" => $req->jabatan,
             "email" => $req->email,
             "alamat" => $req->alamat,
-            "no_telepon" => $req->no_telepon
+            "no_telepon" => $req->no_telepon,
+            "pass" => $req->pass
         );
 
         // cek data pada database
@@ -131,6 +134,7 @@ class Anggota extends Controller
                 $data["email"],
                 $data["alamat"],
                 $data["no_telepon"],
+                $data["pass"],
                 $parameter
             );
             // tampilkan pesan dan status

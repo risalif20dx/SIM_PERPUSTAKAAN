@@ -37,7 +37,7 @@ class MAnggota extends Model
         ->delete();
     }
 
-    function saveData($nama, $no_identitas, $status, $jabatan, $email, $alamat, $no_telepon)
+    function saveData($nama, $no_identitas, $status, $jabatan, $email, $alamat, $no_telepon, $pass)
     {
         $query = DB::table('tb_anggota')
         ->insert([
@@ -47,7 +47,8 @@ class MAnggota extends Model
             "jabatan" => $jabatan,
             "email" => $email,
             "alamat" => $alamat,
-            "no_telepon" => $no_telepon
+            "no_telepon" => $no_telepon,
+            "pass" => $pass
         ]);
     }
 
@@ -66,7 +67,7 @@ class MAnggota extends Model
         return $query;
     }
 
-    function updateData($nama, $no_identitas, $status, $jabatan, $email, $alamat, $no_telepon, $parameter)
+    function updateData($nama, $no_identitas, $status, $jabatan, $email, $alamat, $no_telepon, $pass, $parameter)
     {
         $query = DB::table('tb_anggota')
         ->where("no_identitas", "=", $parameter)
@@ -77,7 +78,8 @@ class MAnggota extends Model
             "jabatan" => $jabatan,
             "email" => $email,
             "alamat" => $alamat,
-            "no_telepon" => $no_telepon
+            "no_telepon" => $no_telepon,
+            "pass" => $pass
         ]);
     }
 }

@@ -38,7 +38,7 @@ class MUser extends Model
         ->delete();
     }
 
-    function saveData($no_panggil, $judul_buku, $pengarang, $penerbit, $deskripsi_fisik, $bahasa, $isbn_issn, $edisi, $deskripsi_buku, $sampul, $tahun_terbit)
+    function saveData($no_panggil, $judul_buku, $pengarang, $penerbit, $deskripsi_fisik, $bahasa, $isbn_issn, $edisi, $deskripsi_buku, $sampul, $tahun_terbit, $jumlah)
     {
         DB::table('tb_buku')
         ->insert([
@@ -52,7 +52,8 @@ class MUser extends Model
             "edisi" => $edisi, 
             "deskripsi_buku" => $deskripsi_buku,
             "sampul" => $sampul,
-            "tahun_terbit" => $tahun_terbit
+            "tahun_terbit" => $tahun_terbit,
+            "jumlah" => $jumlah
         ]);    
     }
 
