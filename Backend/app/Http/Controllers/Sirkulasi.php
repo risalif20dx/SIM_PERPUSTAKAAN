@@ -106,16 +106,23 @@ class Sirkulasi extends Controller
             "waktu_kembali" => $req->waktu_kembali
         ];
 
-        $data = $this->model->detailData($parameter);
+        $cek = $this->model->cekData($parameter, $data['id_anggota']);
 
         // jika ada maka hapus
         if (count($data) >= 1) {
-            // lakukan penghapusan data
-            //$data = $this->model->deleteData($parameter);
+            // lakukan update data
+             $this->model->updateData(
+                $data['no_panggil'],
+                $data['id_anggota'],
+                $data['id_pustakawan'],
+                $data['waktu_pinjam'],
+                $data['waktu_kembali'],
+                $parameter
+            );
 
             // buat respon status
             $status = 1;
-            $pesan = "Data ada";
+            $pesan = "Data berhasil di update";
         } else {
              // tampilkan pesan gagal di hapus
             $status = 0;
@@ -124,7 +131,8 @@ class Sirkulasi extends Controller
 
         return response([
             "status" => $status,
-            "pesan" => $pesan
+            "pesan" => $pesan,
+            // $data
         ],http_response_code());
     }
 }

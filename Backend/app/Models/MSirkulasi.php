@@ -64,7 +64,7 @@ class MSirkulasi extends Model
     {
         $query = DB::table('tb_sirkulasi')
         ->where("no_panggil", "=", $parameter)
-        ->orwhere("id_anggota", "=", $parameter)
+        ->where("id_anggota", "=", $id_anggota)
         ->update([
             "no_panggil" => $no_panggil,
             "id_anggota" => $id_anggota,
