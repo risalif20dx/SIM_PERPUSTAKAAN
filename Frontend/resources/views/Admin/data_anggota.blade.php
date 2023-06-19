@@ -6,7 +6,7 @@
     <h2 class="text-center">DATA ANGGOTA</h2>
     <div class="container">
     <table id="tes2" border=1>
-    <button id="myButton" data-toggle="modal" data-target="exampleModal">Tambah</button>
+    <button id="myButton" data-toggle="modal" type="button" class="btn btn-success" data-target="exampleModal"><i class="fa fa-plus-circle" aria-hidden="true"></i>Tambah</button>
                     
     </table>
     </div>

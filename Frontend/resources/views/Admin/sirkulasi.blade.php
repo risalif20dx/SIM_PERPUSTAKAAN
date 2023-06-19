@@ -6,7 +6,7 @@
     <h2 class="text-center">DATA SIRKULASI</h2>
     <div class="container">
     <table id="test3" border=1>
-    <button id="myButton">Tambah</button>
+    <button id="myButton"  type="button" class="btn btn-success" aria-hidden="true"><i class="fa fa-plus-circle"></i>Tambah</button>
                     
     </table>
     </div>

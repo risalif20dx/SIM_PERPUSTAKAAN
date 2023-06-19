@@ -5,7 +5,7 @@
 
     <h2 class="text-center">DATA BUKU</h2>
     <div class="container">
-    <button id="myButton" data-toggle="modal" data-target="#exampleModal">Tambah</button>
+    <button id="myButton" type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle" aria-hidden="true"></i>Tambah</button>
     <table id="tes" border=1>
                     
     </table>
@@ -96,6 +96,7 @@
 
 @section('script')
             <script>
+                
                 $( document ).ready(function() {
                     $.ajax( 
                     {
@@ -109,7 +110,8 @@
                                    <tr>
                                     <td>${data['buku'][i].bahasa}</td>
                                     <td>${data['buku'][i].des_buku}</td>
-                                    <td><button name="editButton" data-no_panggil="${data['buku'][i].no_panggil}">Edit</button><button data-no_panggil="${data['buku'][i].no_panggil}">Delete</button></td>
+                                    <td><button name="editButton" data-no_panggil="${data['buku'][i].no_panggil}">Edit</button>
+                                    <button data-no_panggil="${data['buku'][i].no_panggil}">Delete</button></td>
                                    
                                    </tr>
                                 `)
